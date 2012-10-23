@@ -1,0 +1,283 @@
+001
+32sent=20302	avethr=145.029947kbps
+sum of nodes=13
+pktlossrate=0.157620%
+
+33sent=23408	avethr=149.077896kbps
+sum of nodes=16
+pktlossrate=0.093985%
+
+34sent=23001	avethr=153.194927kbps
+sum of nodes=14
+pktlossrate=0.056519%
+
+35sent=23108	avethr=149.584487kbps
+sum of nodes=15
+pktlossrate=0.064913%
+
+36sent=20077	avethr=134.872405kbps
+sum of nodes=13
+pktlossrate=0.014942%
+
+
+002
+30sent=6998	avethr=43.852224kbps
+sum of nodes=14
+pktlossrate=0.042869%
+
+31sent=14645	avethr=89.132225kbps
+sum of nodes=14
+pktlossrate=0.095596%
+
+32sent=19680	avethr=129.039186kbps
+sum of nodes=14
+pktlossrate=0.289634%
+
+33sent=23214	avethr=149.710246kbps
+sum of nodes=15
+pktlossrate=0.099078%
+
+34sent=14981	avethr=94.479895kbps
+sum of nodes=13
+pktlossrate=0.060076%
+
+35sent=21202	avethr=137.073150kbps
+sum of nodes=15
+pktlossrate=0.292425%
+
+36sent=13247	avethr=83.112128kbps
+sum of nodes=13
+pktlossrate=0.052842%
+
+
+005
+30sent=12628	avethr=77.322834kbps
+sum of nodes=14
+pktlossrate=0.174216%
+
+31sent=11937	avethr=76.069540kbps
+sum of nodes=14
+pktlossrate=0.142414%
+
+32sent=11327	avethr=74.277327kbps
+sum of nodes=14
+pktlossrate=0.423766%
+
+33sent=17684	avethr=111.979633kbps
+sum of nodes=17
+pktlossrate=0.486315%
+
+34sent=13377	avethr=85.514158kbps
+sum of nodes=16
+pktlossrate=0.799880%
+
+35sent=11964	avethr=75.939202kbps
+sum of nodes=14
+pktlossrate=0.100301%
+
+
+01
+30sent=4257	avethr=26.556535kbps
+sum of nodes=18
+pktlossrate=1.221518%
+
+31sent=3256	avethr=19.826738kbps
+sum of nodes=14
+pktlossrate=0.276413%
+
+32sent=2854	avethr=18.723668kbps
+sum of nodes=13
+pktlossrate=0.140154%
+
+33sent=9234	avethr=59.576009kbps
+sum of nodes=17
+pktlossrate=0.043318%
+
+34sent=1681	avethr=10.607459kbps
+sum of nodes=14
+pktlossrate=0.178465%
+
+35sent=4455	avethr=28.816124kbps
+sum of nodes=13
+pktlossrate=0.179574%
+
+
+02
+36sent=2186	avethr=13.729716kbps
+sum of nodes=15
+pktlossrate=0.137237%
+
+35sent=1510	avethr=9.773413kbps
+sum of nodes=13
+pktlossrate=0.198675%
+
+34sent=2055	avethr=12.973820kbps
+sum of nodes=14
+pktlossrate=0.243309%
+
+33sent=3831	avethr=24.731909kbps
+sum of nodes=16
+pktlossrate=0.234926%
+
+32sent=2338	avethr=15.203323kbps
+sum of nodes=15
+pktlossrate=1.154833%
+
+31sent=2221	avethr=13.530807kbps
+sum of nodes=15
+pktlossrate=0.270149%
+
+30sent=1702	avethr=10.482837kbps
+sum of nodes=15
+pktlossrate=0.646298%
+
+
+03
+30sent=2241	avethr=13.728067kbps
+sum of nodes=16
+pktlossrate=0.446229%
+
+31sent=2077	avethr=12.647825kbps
+sum of nodes=14
+pktlossrate=0.144439%
+
+32sent=2570	avethr=15.935704kbps
+sum of nodes=16
+pktlossrate=0.038911%
+
+33sent=2438	avethr=16.066340kbps
+sum of nodes=15
+pktlossrate=0.041017%
+
+34sent=2245	avethr=14.634911kbps
+sum of nodes=15
+pktlossrate=0.623608%
+
+35sent=1367	avethr=8.916744kbps
+sum of nodes=14
+pktlossrate=0.000000%
+
+36sent=1428	avethr=8.963855kbps
+sum of nodes=14
+pktlossrate=0.700280%
+
+
+04
+33sent=776	avethr=4.968972kbps
+sum of nodes=12
+pktlossrate=0.386598%
+
+32sent=1998	avethr=12.869193kbps
+sum of nodes=20
+pktlossrate=2.102102%
+
+34sent=1142	avethr=7.402579kbps
+sum of nodes=14
+pktlossrate=0.612960%
+
+31sent=1864	avethr=11.613204kbps
+sum of nodes=18
+pktlossrate=3.272532%
+
+
+05
+33sent=527	avethr=3.655333kbps
+sum of nodes=23
+pktlossrate=0.948767%
+
+32sent=596	avethr=3.704530kbps
+sum of nodes=16
+pktlossrate=2.013423%
+
+31sent=963	avethr=5.965917kbps
+sum of nodes=17
+pktlossrate=0.830737%
+
+34sent=806	avethr=5.461555kbps
+sum of nodes=14
+pktlossrate=2.233251%
+
+
+06
+32sent=742	avethr=4.877132kbps
+sum of nodes=15
+pktlossrate=0.269542%
+
+33sent=1988	avethr=12.835561kbps
+sum of nodes=18
+pktlossrate=0.653924%
+
+34sent=1421	avethr=8.972262kbps
+sum of nodes=18
+pktlossrate=1.337087%
+
+
+0005
+30sent=19598	avethr=145.202553kbps
+sum of nodes=23
+pktlossrate=0.015308%
+
+31sent=8168	avethr=146.111894kbps
+sum of nodes=16
+pktlossrate=0.379530%
+
+32sent=12234	avethr=131.354875kbps
+sum of nodes=23
+pktlossrate=0.253392%
+
+33sent=16264	avethr=153.602375kbps
+sum of nodes=22
+pktlossrate=0.018446%
+
+34sent=18337	avethr=139.922264kbps
+sum of nodes=23
+pktlossrate=0.032721%
+
+35sent=21768	avethr=151.413061kbps
+sum of nodes=16
+pktlossrate=0.078096%
+
+36sent=11735	avethr=133.402214kbps
+sum of nodes=18
+pktlossrate=0.255646%
+
+
+0002
+29sent=22426	avethr=138.801805kbps
+sum of nodes=22
+pktlossrate=0.004459%
+
+30sent=23703	avethr=147.794339kbps
+sum of nodes=24
+pktlossrate=0.067502%
+
+31sent=24813	avethr=151.013980kbps
+sum of nodes=23
+pktlossrate=0.060452%
+
+32sent=20027	avethr=131.312522kbps
+sum of nodes=22
+pktlossrate=0.004993%
+
+33sent=20876	avethr=134.633806kbps
+sum of nodes=22
+pktlossrate=0.000000%
+
+34sent=23190	avethr=146.248555kbps
+sum of nodes=22
+pktlossrate=0.034498%
+
+
+0008
+33sent=23679	avethr=152.707233kbps
+sum of nodes=23
+pktlossrate=0.071794%
+
+32sent=22724	avethr=148.996758kbps
+sum of nodes=24
+pktlossrate=0.070410%
+
+34sent=20004	avethr=126.156685kbps
+sum of nodes=22
+pktlossrate=0.119976%
+

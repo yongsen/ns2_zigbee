@@ -1,0 +1,61 @@
+0.002
+sent=6425	drop=137	pktlossrate=2.132296%
+avethrs=44.636134kbps
+sum of nodes=23
+
+0.005
+sent=5914	drop=155	pktlossrate=2.620900%
+avethrs=41.354573kbps
+sum of nodes=28
+
+0.008
+sent=6886	drop=177	pktlossrate=2.570433%
+avethrs=47.857010kbps
+sum of nodes=29
+
+0.01
+sent=5714	drop=238	pktlossrate=4.165208%
+avethrs=36.552099kbps
+sum of nodes=37
+
+0.02
+sent=4684	drop=161	pktlossrate=3.437233%
+avethrs=31.704539kbps
+sum of nodes=29
+
+0.05
+sent=3525	drop=144	pktlossrate=4.085106%
+avethrs=22.018638kbps
+sum of nodes=34
+
+0.1
+sent=2383	drop=94	pktlossrate=3.944608%
+avethrs=16.592402kbps
+sum of nodes=30
+
+0.2
+sent=1180	drop=83	pktlossrate=7.033898%
+avethrs=8.096699kbps
+sum of nodes=37
+
+0.3
+sent=1674	drop=47	pktlossrate=2.807646%
+avethrs=10.988833kbps
+sum of nodes=27
+
+0.4
+sent=801	drop=40	pktlossrate=4.993758%
+avethrs=5.107910kbps
+sum of nodes=33
+
+0.5
+sent=340	drop=9	pktlossrate=2.647059%
+avethrs=2.301349kbps
+sum of nodes=17
+
+0.6
+
+sent=1017	drop=21	pktlossrate=2.064897%
+avethrs=6.949009kbps
+sum of nodes=30
+
