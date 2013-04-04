@@ -184,7 +184,7 @@ $ns_ at $stopTime "$ns_ halt"
 
 # 结束程序定义
 proc stop {} {
-    global ns_ tracefd starttime(1) val env
+    global ns_ tracefd apptime(1) val env
     $ns_ flush-trace
     close $tracefd
     set hasDISPLAY 0
