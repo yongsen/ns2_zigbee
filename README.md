@@ -28,6 +28,6 @@ How to
 
 3. run ns zigbee.tcl
 
-4. run awk zigbee.tr
+4. run awk -f thr_drop_delay.awk zigbee.tr
 
 5. run gnuplot xxx.dat
