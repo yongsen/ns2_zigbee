@@ -55,14 +55,14 @@
 <a name="how-to" class="anchor" href="#how-to"><span class="octicon octicon-link"></span></a>How to</h3>
 
 <ol>
-<li>make sure zigbee.scn and zibee.tcl are in the same folder</li>
+<li>Please make sure zigbee.scn and zibee.tcl are in the same folder. The simulation script is written for NS-2.34 with tcl8.4.</li>
 <li>
 <code>cd</code> to the folder by terminal</li>
-<li>run <code>ns zigbee.tcl</code>
+<li>run <code>ns zigbee.tcl</code>. This will generate the simulation results stored in the output file named "zigbee.tr".
 </li>
-<li>run <code>awk zigbee.tr</code>
+<li>run <code>awk -f thr_drop_delay.awk zigbee.tr</code>.
 </li>
-<li>run <code>gnuplot xxx.dat</code>
+<li>run <code>gnuplot xxx.dat</code>. This line of code requires that gnuplot has been already intalled on the system.
 </li>
 </ol>
       </section>
