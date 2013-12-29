@@ -39,35 +39,35 @@
 
 <ol>
 <li>
-<em>zigbee.scn</em>: network topology in 3D</li>
+<code>zigbee.scn</code>: network topology in 3D</li>
 <li>
-<em>zigbee.tcl</em>: network script written in tcl</li>
+<code>zigbee.tcl</code>: network script written in tcl</li>
 <li>
-<em>thr</em>drop_delay.awk_: eualuation script written in awk</li>
+<code>thr_drop_delay.awk</code>: eualuation script written in awk</li>
 <li>
 <strong>data</strong>: results of delay, throughput, jitter, and packet loss rate</li>
 <li>
 <strong>out</strong>: figures of results</li>
 <li>
 <strong>demo</strong>: demos of nam</li>
-<li><a href="https://raw.github.com/yongsen/ns2_zigbee/master/thesis.pdf">thesis.pdf</a></li>
+<li>
+<a href="https://raw.github.com/yongsen/ns2_zigbee/master/thesis.pdf">thesis.pdf</a> (in Chinese)</li>
 </ol><h3>
 <a name="how-to" class="anchor" href="#how-to"><span class="octicon octicon-link"></span></a>How to</h3>
 
 <ol>
-<li>make sure zigbee.scn and zibee.tcl are in the same folder</li>
+<li>Please make sure zigbee.scn and zibee.tcl are in the same folder. The simulation script is written for NS-2.34 with tcl8.4.</li>
 <li>
 <code>cd</code> to the folder by terminal</li>
-<li>run <code>ns zigbee.tcl</code>
-</li>
-<li>run <code>awk zigbee.tr</code>
-</li>
-<li>run <code>gnuplot xxx.dat</code>
-</li>
+<li>run <code>ns zigbee.tcl</code>. This will generate the simulation results stored in the output file named "zigbee.tr".</li>
+<li>run <code>awk -f thr_drop_delay.awk zigbee.tr</code> to get the performance results.</li>
+<li>run <code>gnuplot</code> and <code>plot xxx.dat</code> to get the figures of simulation results.</li>
 </ol><h3>
 <a name="some-results" class="anchor" href="#some-results"><span class="octicon octicon-link"></span></a>Some Results</h3>
 
-<p><img src="https://raw.github.com/yongsen/ns2_zigbee/master/out/throughput_02_05_1.png" alt="Throughput"><img src="https://raw.github.com/yongsen/ns2_zigbee/master/out/thr_beacon.png" alt="Throughput with beacon (dis)enabled"></p>
+<p><img src="https://raw.github.com/yongsen/ns2_zigbee/master/out/throughput_02_05_1.png" alt="Throughput"></p>
+
+<p><img src="https://raw.github.com/yongsen/ns2_zigbee/master/out/thr_beacon.png" alt="Throughput with beacon (dis)enabled"></p>
       </section>
     </div>
 
