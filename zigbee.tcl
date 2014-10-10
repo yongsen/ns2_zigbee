@@ -12,30 +12,29 @@
 ###################################################
 
 
-# 选项定义
-set val(chan)           Channel/WirelessChannel    ;# 信道类型：无线信道
-set val(prop)           Propagation/Shadowing      ;# 广播模型：Shadowing（Shadowing/TwoRayGround/FreeSpace） 
+# Parameters Settings
+set val(chan)           Channel/WirelessChannel    ;# Channel Model: Wireless
+set val(prop)           Propagation/Shadowing      ;# Propragation Model: Shadowing (Shadowing/TwoRayGround/FreeSpace) 
 set val(netif)          Phy/WirelessPhy/802_15_4
 set val(mac)            Mac/802_15_4
-set val(ifq)            Queue/DropTail/PriQueue    ;# 接口队列类型：队尾丢弃
-set val(ll)             LL                         ;# 逻辑链路类型
-set val(ant)            Antenna/OmniAntenna        ;# 天线模型：
-set val(ifqlen)         100                        ;# 队列允许最大封包数
-set val(nn)             56                         ;# 节点数
-set val(rp)             AODV                       ;# 路由协议：AODV（DSR/ZBR/AOMDV/AODV）
-set val(x)		100			   ;# nam中显示的中心位置
+set val(ifq)            Queue/DropTail/PriQueue    ;# Queue Model: Drop at Tail
+set val(ll)             LL                         ;# Link Layer Model
+set val(ant)            Antenna/OmniAntenna        ;# Antenna Model
+set val(ifqlen)         100                        ;# Max Number of Queue
+set val(nn)             56                         ;# Number of Nodes
+set val(rp)             AODV                       ;# Routing Protocol: AODV (DSR/ZBR/AOMDV/AODV)
+set val(x)		100			   ;# Center Position of nam
 set val(y)		100
         
-set val(tr)		zigbee.tr		   ;# 跟踪文件
-set val(nam)		zigbee0.nam		   ;# nam文件
-set val(traffic)	cbr                        ;# 数据流：cbr（cbr/poisson/ftp）
+set val(tr)		zigbee.tr		   ;# Tracing File
+set val(nam)		zigbee0.nam		   ;# Nam File
+set val(traffic)	cbr                        ;# Data Flow: cbr (cbr/poisson/ftp)
 
-set val(trInterval)	0.01			   ;# 数据发送间隔
-set val(startInterval)  0.5			   ;# 设备开启时间系数
+set val(trInterval)	0.01			   ;# Time Interval between Packets
+set val(startInterval)  0.5			   ;# Start Time
+set stopTime            100			   ;# Stop Time
 
-set stopTime            100			   ;# 仿真结束时间
-
-# 读取命令行
+# Input
 proc getCmdArgu {argc argv} {
         global val
         for {set i 0} {$i < $argc} {incr i} {
@@ -47,9 +46,9 @@ proc getCmdArgu {argc argv} {
 }
 getCmdArgu $argc $argv
 
-# 设置时间参量
+# Time Settings
 
-# 初始化全局变量
+# Initial Global Variables
 set ns_		[new Simulator]
 set tracefd     [open ./$val(tr) w]
 $ns_ trace-all $tracefd
@@ -65,7 +64,7 @@ Mac/802_15_4 wpanCmd verbose on
 Mac/802_15_4 wpanNam namStatus on		
 
 
-# 建立拓扑对象
+# Topology Configuration
 set topo       [new Topography]
 $topo load_flatgrid $val(x) $val(y)
 
@@ -73,7 +72,7 @@ set god_ [create-god $val(nn)]
 
 set chan_1_ [new $val(chan)]
 
-# 配置节点
+# Node Configuration
 $ns_ node-config -adhocRouting $val(rp) \
 		-llType $val(ll) \
 		-macType $val(mac) \
@@ -101,10 +100,10 @@ for {set i 0} {$i < $val(nn) } {incr i} {
 	$node_($i) random-motion 0		
 }
 
-# 读取节点位置配置文件
+# Topology Input
 source ./zigbee.scn
 
-# 开启协调点与从节点
+# Start Coordinate/Normal Nodes
 $ns_ at 0.0	"$node_(0) NodeLabel \"PAN Coor\""
 $ns_ at 0.0	"$node_(0) sscs startCTPANCoord"	
 
@@ -122,14 +121,14 @@ for {set i 52} {$i < 56} {incr i} {
 
 #########################################################
 
-# 设置nam运行速率
+# Runing Speed of Nam
 Mac/802_15_4 wpanNam PlaybackRate 5ms
 $ns_ at 30.0 "Mac/802_15_4 wpanNam PlaybackRate 10.0ms"
 $ns_ at 40.0 "Mac/802_15_4 wpanNam PlaybackRate 100.0ms"
 
 $ns_ at 50.0 "puts \"\nTransmitting data ...\n\""
 
-# 建立节点间UDP与cbr
+# Setup UDP and CBR
 proc cbrtraffic { src dst interval starttime } {
    global ns_ node_
    set udp_($src) [new Agent/UDP]
@@ -146,45 +145,45 @@ proc cbrtraffic { src dst interval starttime } {
    $ns_ at $starttime "$cbr_($src) start"
 }
 
-# 回复机制设定
+# ACK
 if {$val(rp) == "ZBR"} {
-	Mac/802_15_4 wpanCmd callBack 2	;# 0=无回复; 1=仅失败回复 (默认值); 2=失败与成功都回复
+# 0=No ACK; 1=ACK at failure (default); 2=ACK at success/failure
+	Mac/802_15_4 wpanCmd callBack 2;
 }
 if { ("$val(traffic)" == "cbr") } {
    puts "\nTraffic: $val(traffic)"
    puts [format "Acknowledgement for data: %s" [Mac/802_15_4 wpanCmd ack4data off]]
 
-# 调用函数，启动cbr数据流
-
+# Start CBR
    for {set i 1} {$i < 56} {incr i} {
    $val(traffic)traffic 0 $i $val(trInterval) [expr 30+$i]) 
    }
   
-# 设置各层显示颜色
+# Color of Nodes in Nam
    Mac/802_15_4 wpanNam FlowClr -p AODV -c green
    Mac/802_15_4 wpanNam FlowClr -p ARP -c tomato
    Mac/802_15_4 wpanNam FlowClr -p MAC -c navy
 }
 
 
-# 定义节点在nam中大小
+# Size of Nodes in Nam
 for {set i 0} {$i < $val(nn)} {incr i} {
 	$ns_ initial_node_pos $node_($i) 8
 }
 
-# 节点复位
+# Reset of Nodes
 for {set i 0} {$i < $val(nn) } {incr i} {
     $ns_ at $stopTime "$node_($i) reset";
 }
 
-# 仿真结束
+# Stop Simulation
 $ns_ at $stopTime "stop"
 $ns_ at $stopTime "puts \"\nNS EXITING...\n\""
 $ns_ at $stopTime "$ns_ halt"
 
-# 结束程序定义
+# Stop Function
 proc stop {} {
-    global ns_ tracefd apptime(1) val env
+    global ns_ tracefd starttime(1) val env
     $ns_ flush-trace
     close $tracefd
     set hasDISPLAY 0
@@ -199,6 +198,6 @@ proc stop {} {
     }
 }
 
-# 启动仿真
+# Start Simulation
 puts "\nStarting Simulation..."
 $ns_ run
