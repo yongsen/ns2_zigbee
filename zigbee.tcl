@@ -27,7 +27,7 @@ set val(x)		100			   ;# Center Position of nam
 set val(y)		100
         
 set val(tr)		zigbee.tr		   ;# Tracing File
-set val(nam)		zigbee0.nam		   ;# Nam File
+set val(nam)		zigbee.nam		   ;# Nam File
 set val(traffic)	cbr                        ;# Data Flow: cbr (cbr/poisson/ftp)
 
 set val(trInterval)	0.01			   ;# Time Interval between Packets
@@ -183,7 +183,8 @@ $ns_ at $stopTime "$ns_ halt"
 
 # Stop Function
 proc stop {} {
-    global ns_ tracefd starttime(1) val env
+    #global ns_ tracefd starttime(1) val env
+    global ns_ tracefd appTime val env
     $ns_ flush-trace
     close $tracefd
     set hasDISPLAY 0
