@@ -101,7 +101,7 @@ for {set i 0} {$i < $val(nn) } {incr i} {
 }
 
 # Topology Input
-source ./zigbee.scn
+source ./zigbee_topology.scn
 
 # Start Coordinate/Normal Nodes
 $ns_ at 0.0	"$node_(0) NodeLabel \"PAN Coor\""
