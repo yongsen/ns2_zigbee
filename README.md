@@ -30,4 +30,4 @@ How to
 
 4. run `awk -f thr_drop_delay.awk zigbee.tr` to get performance results
 
-5. run `gnuplot [xxx].dat` to get performance plots where `[xxx].data` has the performance results
+5. run `gnuplot [xxx].dat` to get performance plots where `[xxx].dat` has the performance results
